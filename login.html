@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>سامانه یکپارچه گردش اطلاعات و مدیریت سبد پروژه ها – سیگما</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="randombg()">
+    <div class="full-bg" ></div>
+    <div class="container-fluid">
+        <div class="landing-header-footer">
+            <div class="landing-header">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 ml-3">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://taraportal.ir/login3.aspx">
+                                    <img src="images/smartphone.svg" width="25" height="25" alt="نسخه موبایل">
+                                    <span class="mr-1" id="mobile-img"> نسخه همراه</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://tarasepehr.com/learningcenter" target="_blank">
+                                    <img src="images/info.svg" width="25" height="25" alt="آموزش سامانه">
+                                    <span class="mr-1" id="info-img">آموزش سامانه</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-0">
+                        <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-header">
+                        <a class="navbar-brand mx-auto">
+                            <img src="images/شهرداری_اصفهان.svg" width="40" height="40" alt="لوگو شهر داری اصفهان">
+                            <span>شهرداری اصفهان</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="landing-footer">
+                <ul class="navbar navbar-nav  hidden-780" style="float: right !important;">
+                    <li><i class="fas fa-phone" title="پشتیبانی سامانه">  02188801612</i></li>
+                </ul>
+
+                <ul class="navbar navbar-nav  hidden-780" style="float: right !important;">
+                    <li><i class="fas fa-envelope" title="پشتیبانی سامانه">  support@tarasepehr.com</i></li>
+                </ul>
+
+                <ul class="navbar navbar-nav center-780" style="float: left">
+                    <li><span class="latin-font hidden-780" > - Copyright  ©  Tara Sephr Ayric</span>
+                        <span class="center-780"><a href="https://taraspeher.com">https://taraspeher.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-sm wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="login">
+                        <div class="login-logo">
+
+                        </div>
+
+                        <div class="login-errors">
+                            <div class="alert alert-danger" style="text-align: center; margin-bottom:10px;">
+                                <i class="fa fa-exclamation-triangle"></i>&nbsp;
+                                <span>این متن جهت تست است. این متن جهت تست است. این متن جهت تست است. این متن جهت تست است. این متن جهت تست است.</span>
+                            </div>
+                        </div>
+
+                        <div class="login-header">
+                            <div class="col-sm-12 text-center">
+                                <h5 style="margin-bottom: 0 !important;">سامانه یکپارچه گردش اطلاعات و مدیریت عملیات و پروژه های شهرداری اصفهان (سیگما)</h5>
+                            </div>
+                        </div>
+
+                        <div class="login-body">
+                            <div class="row">
+                                <div class="col-sm-4 login-img">
+                                    <img src="images/Login.png" width="130"  height="130" class="img-responsive">
+                                    <div style="margin-top: 10px">
+                                        نگارش: <strong>10.3.0.0</strong>
+                                    </div>
+                                    <div>
+                                        شناسه رایانه:
+                                        <br>
+                                        <strong>2.180.185.63</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8 col-xs-12">
+                                    <div class="row" id="loginContainer">
+                                        <div class="col-sm-12">
+                                            <div class="login-form clearfix">
+                                                <form action="" method="post">
+                                                    <h6 class="text-right mb-2 modal-title">اطلاعات کاربری خود را وارد نمائید</h6>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="username" name="username" autocomplete="on" placeholder="نام کاربری">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                                                        </div>
+                                                        <input type="password" class="form-control" id="pass" name="password" autocomplete="on" placeholder="رمز عبور">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <div class="col-sm-12 text-center mt-2" style="padding: 0px;">
+                                                            <label class="radio-inline" >
+                                                                <input type="radio" value="1" name="loginMethod" checked="checked"> کاربر سامانه
+                                                            </label>
+
+                                                            <label class="radio-inline" style="font-weight: 600">
+                                                                <input type="radio" value="2" name="loginMethod"> Active Directory
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <select class="form-control" id="TokenType" name="TokenType" aria-invalid="false">
+                                                        <option value="3" checked="">مورد اول</option>
+                                                        <option value="2">مورد دوم</option>
+                                                        <option value="1">مورد سوم</option>
+                                                    </select>
+
+                                                    <div class="input-group mt-2">
+                                                        <div id="rechaptcha-input">
+                                                            <input type="text" class="form-control" id="rechaptcha" name="rechaptcha" placeholder="اعداد امنیتی">
+                                                        </div>
+                                                        <div id="rechaptcha-img">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-success" type="submit" button="true" icon="fa-sign-in-alt">
+                                                            <i class="fa fa-sign-in-alt" style="float: right; margin: 5px 0px 0px 8px;"></i>
+                                                            ورود به سامانه
+                                                        </button>
+                                                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                             سایر گزینه ها
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" >ثبت نام</a>
+                                                            <a class="dropdown-item" onclick="displayForgetPassword()">فراموشی رمز عبور</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="forgotPasswsordContainer">
+                                        <div class="col-sm-12">
+                                            <div class="clearfix">
+                                                <form action="" method="post">
+                                                    <h6 class="text-right mb-2 modal-title">لطفا ایمیل خود را وارد نمائید</h6>
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text"><i class="fa fa-at"></i></div>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="email" name="email" autocomplete="off" placeholder="Email Address">
+                                                    </div>
+
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-success" type="submit" button="true">
+                                                            <i class="fa fa-unlock-alt" style="float: right; margin: 5px 0px 0px 8px;"></i>
+                                                            بازیابی کلمه عبور
+                                                        </button>
+                                                        <button type="button" class="btn btn-secondary" onclick="displayLogin()">
+                                                            بازگشت
+                                                            <i class="fa fa-reply-all" style="float: right; margin: 5px 0px 0px 8px;"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="login-footer">
+                            <div class="linkBox">
+                               <div style="text-align:center; margin: 0px auto auto;">
+                                   <div id="link1" title="درباره سامانه" class="fas fa-info-circle fontStyle"              data-toggle="modal" data-target="#info-modal"></div>
+                                    <div id="link2" title="پیش نیازهای استفاده از سامانه" class="fas fa-toolbox fontStyle" data-toggle="modal" data-target="#prequ-modal"></div>
+                                   <div id="link3" title="پشتیبانی سامانه" class="fas fa-phone-square fontStyle"           data-toggle="modal" data-target="#hc-modal"></div>
+                                   <div id="link4" title="درباره شرکت" class="fas fa-blender-phone fontStyle"              data-toggle="modal" data-target="#info-comp-modal"></div>
+                                   <a href="https://tarasepehr.com" target="_blank"><div id="link5" title="وبسایت شرکت" class="fas fa-archway fontStyle"></div></a>
+                                </div>
+                            </div>
+                            <div class="img-location clearfix">
+                                <i class="fas fa-map-marker-alt"></i> نام عکس - استان
+                                <i class="fas fa-sync-alt" onclick="randombg()"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modals">
+        <div class="modal fade" id="info-modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">درباره سامانه جامع مدیریت پروژه</h6>
+                        <i class="fa fa-times" aria-hidden="true"  data-dismiss="modal"></i>
+                    </div>
+                    <div class="modal-body" style="overflow-y: scroll;">
+                        <p style="text-align:justify;">
+                            <span>سامانه جامع مدیریت پروژه ، نسل جدید نرم افزارهای عمرانی ؛ اولین سامانه تحت وب و ابزاری قدرتمند برای مهندسین مترور جهت انجام کلیه امور مربوط به تنظیم صورت وضعیت می باشد.</span>
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>با پیشرفت روز افزون تکنولوژی و رشد سریع امکانات در دنیای مجازی ، استفاده از محیط وب تنها راه برای رسیدن به اهداف ذیل می باشد.</span>
+                        </p>
+                        <ul style="margin-right:20px;">
+                            <li>ابزارهای برنامه‌ریزی</li>
+                            <li>مدیریت جامع و کامل بر روی نحوه ی پیشرفت و عملکرد پروژه ها در هر لحظه</li>
+                            <li>عدم وابستگی به سیستم عامل خاص و نصب نرم افزارهای جانبی </li>
+                            <li>استفاده بر روی رایانه های مختلف بدون نیاز به سخت افزارهای پیشرفته</li>
+                            <li>ارتقاء امکانات نرم افزار در کوتاهترین زمان ممکن ، تنها با بروزرسانی نسخه نصب شده بر روی سرور</li>
+                            <li>عدم نیاز به همراه داشتن قفل و محدودیت اجرا ، برای استفاده از سامانه</li>
+                            <li>عدم نیاز به انتقال فیزیکی اطلاعات و گزارشات ( از طریق CD ، Flash Memory )  با توجه به دسترسی آسان از طریق شبکه اینترنت</li>
+                        </ul>
+
+                        <p style="text-align:justify;">
+                            <span>سامانه جامع مدیریت پروژه دارای امکانات ذیل می باشد :</span>
+                        </p>
+                        <ul style="margin-right:20px;">
+                            <li>امکان تعریف سطح دسترسی مشخص به هر بخش از سامانه ، برای تمامی کاربران سازمانی و برون سازمانی</li>
+                            <li>سرعت بالا در انتقال و نمایش اطلاعات در شبکه </li>
+                            <li>امنیت بالا در نگهداری و تبادل اطلاعات در فضای مجازی</li>
+                            <li>محیط زیبا و متفاوت با امکان انتخاب قالب های رنگی مختلف مطابق با سلیقه کاربر</li>
+                            <li>کاربری آسان و سرعت بالا در ورود اطلاعات</li>
+                            <li>امکان تعریف اشخاص حقیقی - حقوقی و طرفین پیمان بصورت نامحدود</li>
+                            <li>ورود اطلاعات پیمان به صورت کامل</li>
+                            <li>تعریف پیمان ها و پروژه ها بصورت تک عاملی ، دو ، سه ، چهار و چند عاملی</li>
+                            <li>تهیه متره برآورد بدون نیاز به ایجاد پیمان در نرم افزار</li>
+                            <li>ایجاد ستون های جدید برای محاسبات به دلخواه کاربر</li>
+                            <li>افزودن فایل های ضمیمه صورت جلسه در جلسات مختلف</li>
+                            <li>ایجاد نقش های جدید به دلخواه کاربر ( تا 10 ‌نقش )</li>
+                            <li>ایجاد فهرست بهای خاص بر حسب نیاز کاربر</li>
+                            <li>افزودن ردیف در هنگام ورود اطلاعات به صورت دلخواه در محل مناسب</li>
+                            <li>تعیین ابتدا و انتهای مسیر و محاسبه خودکار مسافت حمل شده</li>
+                            <li>افزودن فهرست بها به ساختار شکست</li>
+                            <li>ذخیره سازی خودکار اطلاعات</li>
+                            <li>نمایش ردیفهای هر بخش از ساختار شکست به صورت مجزا و کلی  </li>
+                            <li>استفاده از روش های درصد بر هزینه ، قیمت واحد ، مقطوع و فرمولی در برآورد و صورت وضعیت	</li>
+                            <li>محاسبه تعدیل پروژه ، بدون نیاز به ورود اطلاعات صورت وضعیت </li>
+                            <li>محاسبه تعدیل بدون نیاز به گزارش گیری با تمامی جزئیات به تفکیک تاریخ </li>
+                            <li>محاسبه تعدیل به صورت ادغامی بر اساس خلاصه فصل و رشته</li>
+                        </ul>
+                        <p></p>
+
+                        <p style="text-align:justify;">
+                            <span>تکنولوژی و ابزارهای مورد استفاده در تولید و بهره برداری از سامانه :</span>
+                        </p>
+                        <ul class="latin-list">
+                            <li>Microsoft Visual Studio 2019</li>
+                            <li>Microsoft .Net Framework 4.7.2</li>
+                            <li>Microsoft SQL Server 2017 Database Engine</li>
+                            <li>Visual C# Programming Language</li>
+                            <li>ASP.Net MVC / Ajax / JQuery / Bootstrap</li>
+                            <li>Razor View Engine</li>
+                            <li>StimulSoft Reporting Tools</li>
+                            <li>Microsoft Windows Server 2016 DataCenter</li>
+                            <li>Internet Information Services 10</li>
+                        </ul>
+                        <p></p>
+                        <p style="text-align:justify;">
+                            <span>قابلیت استفاده از سامانه ، در مرورگر های استاندارد :</span>
+                        </p>
+                        <ul class="latin-list">
+                            <li>Google Chrome</li>
+                            <li>Mozilla FireFox</li>
+                            <li>Opera Web Browser</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default modal-dis" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="prequ-modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">پیش نیازهای استفاده از سامانه جامع مدیریت پروژه</h6>
+                        <i class="fa fa-times" aria-hidden="true"  data-dismiss="modal"></i>
+                    </div>
+                    <div class="modal-body">
+                        جهت استفاده از تمام امکانات سامانه می بایست نرم افزار های زیر بر روی سیستم شما نصب شده باشد. جهت نصب هر یک از نرم افزار ها بر روی گزینه « دریافت و نصب » آن کلیک کنید
+                        <br>
+                        <ul class="latin-list">
+                            <li>Peyweb Report Fonts ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/PeywebFonts.exe" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                        </ul>
+                        <br>
+                        پیشنهاد می گردد ، جهت نمایش صحیح امکانات سامانه و افزایش امنیت ، نسخه مرورگر رایانه خود را همواره بروز نگهدارید. با کلیک بر روی گزینه « دریافت و نصب » هر یک از مرورگر های زیر ، می توانید آخرین نسخه مرورگر را دریافت کنید :
+                        <br>
+                        <ul class="latin-list">
+                            <li>Google.Chrome.83.x86.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Google.Chrome.83.x86.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                            <li>Google.Chrome.83.x64.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Google.Chrome.83.x64.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                            <li>Mozilla.Firefox.77.x86.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Mozilla.Firefox.77.x86.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                            <li>Mozilla.Firefox.77.x64.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Mozilla.Firefox.77.x64.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                            <li>Opera.69.x86.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Opera.69.x86.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                            <li>Opera.69.x64.exe ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/Opera.69.x64.exe" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                        </ul>
+                        به منظور استفاده از امکانات قفل سخت افزاری لازم است ابتدا نرم افزار مربوط به آن را با استفاده از فایل نصبی زیر بر روی سیستم خود نصب نمائید:
+                        <br>
+                        <ul class="latin-list">
+                            <li>Parskey Library ( <a style="color: black; --darkreader-inline-color:#e8e6e3;" href="./Prerequisite/ParsKey_Installer_v2.23.rar" target="_blank" data-darkreader-inline-color="">دریافت و نصب</a> )</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default modal-dis" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="hc-modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">پشتیبانی</h6>
+                        <i class="fa fa-times" aria-hidden="true"  data-dismiss="modal"></i>
+                    </div>
+                    <div class="modal-body">
+                        <p style="text-align:justify;">
+                            کادر پشتیبانی شرکت آئین در ساعات اداری پاسخگوی سئوالات شما می باشند. جهت استفاده از خدمات پشتیبانی شرکت با شماره های زیر تماس حاصل نمائید
+                            <br>
+                        </p>
+                        <p  align="left">17 - 22893516<br>21 - 22893520</p>
+                        <p></p>
+
+                        <p style="text-align:justify;">
+                            آدرس دفتر مرکزی :تهران - پاسداران، گلستان سوم، خیابان شهید اسلامی، نبش گلستان پنجم، پلاک 192، ساختمان آرسس، طبقه سوم، واحد 304
+                        </p>
+                        <p></p>
+                        <p style="text-align:justify;">همچنین می توانید با ارسال رایانامه به آدرس ذیل ، از خدمات پشتیبانی بهرمند شوید</p>
+                        <div align="left">E-mail :  <a style="color: black;" href="mailto:support@aien.net">support@aien.net</a></div>
+                        <p></p>
+                        <p style="text-align:justify;">سایت اینترنتی شرکت مهندسی آئین :</p>
+                        <div align="left">Website :  <a style="color: black;" href="http://www.aien.net/" target="_blank" >www.aien.net</a></div>
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default modal-dis" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="info-comp-modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">درباره شرکت مهندسی آئین</h6>
+                        <i class="fa fa-times" aria-hidden="true"  data-dismiss="modal"></i>
+                    </div>
+                    <div class="modal-body">
+                        <p style="text-align:justify;">
+                            نزدیک به سه دهه است که با تولیدات و خدمات هرچند اندک ولی صدیق خود در خدمت شما هستیم . امروز نام آئین و تدبیر همانند دیگر ابزار مهندسی در صنعت عمران متداول و روزمره گردیده اند.
+                        </p>
+                        <p style="text-align:justify;">
+                            اولین نگارش تدبیر بعنوان ابزاری سریع ، جامع و دقیق در دستان مهندسین مترور، طراحی و تولید گردید. آخرین نگارش تدبیر با وسعتی به پهنای نظرات بالغ بر بیست و پنج هزار کاربر ، طی سه دهه به روز گردیده است.
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>چالش اصلی امروز داستان کهنه کامپیوتر و خدمات ارزنده آن نیست. عدم ارتباطات و انتقال داده ها با مدیریت کارا و ضعف در سرعت مورد قبول امروز ، خلاء جدی در مدیریت پروژه ها ، بویژه مدیریت های کلان بوجود آورده است. </span>
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>دقت و صحت در محاسبات دغدغه مدیران امروز نیست. جمع آوری،دسته بندی ، پالایش ، گزارشگیری و دسترسی سریع به داده ها ، بویژه در مدیریتهای کلان ، ضعفی برجسته بر تارک این مدیریتها بویژه در پروژه های عمرانی حک نموده است.</span>
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>سامانه جامع مدیریت پروژه ، سامانه ای در محیط وب، نسل جدید نرم افزارهای عمرانی است که با اولین ملاحظه نه تنها قدم در نابودی این خلاء و ضعف برداشته ، بلکه بستری مناسب در ایجاد ارتباط در لحظه ، میان پائین ترین سطح پروژه تا سطح مدیریت کلان از هر نقطه جهان را فراهم نموده است.</span>
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>کاربری آسان، سرعت بسیار بالا در انتقال داده ها، امنیت قابل توجه، نصب، راه اندازی، آموزش، رفع اشکال از راه دور ( Remote)، کاهش بسیار محسوس در صرف زمان و هزینه ها، مدیریت جامع و در لحظه بر روی پیشرفت و نحوه عملکرد پروژه ها از هر نقطه جهان، و قابلیتهای جدید دیگر، سامانه جامع مدیریت پروژه را از دیگر نرم افزارهای موجود که برای دنیای امروز کهنه شده و کارائی چندانی ندارند با تفاوت بسیارچشمگیر متمایز می نماید.</span>
+                        </p>
+                        <p style="text-align:justify;">
+                            <span>همانگونه که در نزدیک به سه دهه قبل نرم افزار دیر آشنای تدبیر انقلابی در فعالیتهای مالی عمرانی ایجاد نمود، امروز با معرفی سامانه جامع مدیریت پروژه شاهد موج دوم این انقلاب در ابعادی بس وسیع تر خواهیم بود.امید است با فعالیتهای ناچیز خود همواره شاهد اعتماد و حمایت صنعت عمران برای مجموعه آئین باشیم.</span>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default modal-dis" data-dismiss="modal">بستن</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $( "#forgotPasswsordContainer" ).addClass("d-none");
+            
+        });
+        
+        function randombg() {
+            var images=['background-img/001.jpg',
+                'background-img/002.jpg',
+                'background-img/003.jpg',
+                'background-img/004.jpg',
+                'background-img/005.jpg',];
+
+            var randomNumber = Math.floor(Math.random() * images.length);
+            var bgImg = 'url(' + images[randomNumber] + ')';
+
+            $('.full-bg').css({'background':bgImg, 'background-size':'cover', 'height':'100%','background-position':'center','background-repeat':'no-repeat','background-size':'cover'});
+
+
+
+        }
+        
+        function displayLogin() {
+            $( "#loginContainer" ).removeClass("d-none");
+            $( "#forgotPasswsordContainer" ).addClass("d-none");
+        }
+
+        function displayForgetPassword() {
+            $( "#loginContainer" ).addClass("d-none");
+            $( "#forgotPasswsordContainer" ).removeClass("d-none");
+        }
+    </script>
+</body>
+</html>
